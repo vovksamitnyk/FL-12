@@ -10,17 +10,21 @@
 @mixin link-mixin {
    color: map-get($colors, text-1);
 }
+
 * {
    padding: 0;
    margin: 0;
 }
+
 body {
    background: map-get($colors, body-bg);
    font-family: Hind, sans-serif;
 }
+
 .header, .section_text, .section_banner_heading {
    color: map-get($colors, text-2);
 }
+
 .header {
    height: 375px;
    border-radius: 0 0 40% 0;
@@ -56,70 +60,71 @@ body {
       line-height: 12px;
       font-family: 'Fresca', sans-serif;
    }
+   .login {
+      font-size: 10px;
+      margin-left: 75px;
+      @include link-mixin;
+   }
 }
 
-.login {
-   font-size: 10px;
-   margin-left: 75px;
-   @include link-mixin;
-}
 .section {
    margin: 0 auto;
    width: 960px;
-}
-.section_text {
-   text-align: center;
-   margin: 1em;
-   font-size: 20px;
-   font-weight: 800;
-   &::before {
-      content: "adventure";
-      position: absolute;
-      float: right;
-      background-color: map-get($colors, marker-bg);
-      margin-left: 112px;
-      line-height: 0.8em;
-      padding-top: 8px;
+   .section_text {
+      text-align: center;
+      margin: 1em;
+      font-size: 20px;
       font-weight: 800;
+      &::before {
+         content: "adventure";
+         position: absolute;
+         float: right;
+         background-color: map-get($colors, marker-bg);
+         margin-left: 112px;
+         line-height: 0.8em;
+         padding-top: 8px;
+         font-weight: 800;
+      }
+   }
+   .section_card_wrap {
+      margin: 0 auto;
+      width: 60%;
+      .section_card {
+         border-radius: 4px;
+         margin-bottom: 14px;
+         display: flex;
+         padding: 10px;
+         background-color: map-get($colors, cards-bg);
+         img {
+            border-radius: 4px;
+            height: 100%;
+         }
+      }
+      .section_card_right_container {
+         padding: 0.5em 2.5em;
+         color: map-get($colors, text-1);
+         .section_card_heading, .section_link {
+            color: map-get($colors, text-1);
+            display: block;
+            text-align: center;
+            margin-bottom: 1em;
+            text-decoration-line: none;
+         }
+         .section_card_heading {
+            margin-top: 1em;
+            font-size: 14px;
+         }
+         .section_card_text, .section_link {
+            font-size: 8px;
+         }
+         .section_link {
+            margin-top: 2em;
+            @include link-mixin;
+         }
+      }
    }
 }
-.section_card_wrap {
-   margin: 0 auto;
-   width: 60%;
-}
-.section_card {
-   border-radius: 4px;
-   margin-bottom: 14px;
-   display: flex;
-   padding: 10px;
-   background-color: map-get($colors, cards-bg);
-   img {
-      border-radius: 4px;
-      height: 100%;
-   }
-}
-.section_card_right_container {
-   padding: 0.5em 2.5em;
-   color: map-get($colors, text-1);
-}
-.section_card_heading, .section_link {
-   color: map-get($colors, text-1);
-   display: block;
-   text-align: center;
-   margin-bottom: 1em;
-   text-decoration-line: none;
-}
-.section_card_heading {
-   margin-top: 1em;
-   font-size: 14px;
-}
-.section_card_text, .section_link {
-   font-size: 8px;
-}
-.section_link {
-   margin-top: 2em;
-   @include link-mixin;
-}
+
 .section_banner {
    border-radius: 4px;
    display: flex;
@@ -141,22 +146,24 @@ body {
          font-family: 'Fresca', sans-serif;
       }
    }
-}
-.section_banner_heading {
-   &::before {
-      content: "start";
-      background-color: map-get($colors, marker-bg);
-      position: absolute;
-      font-weight: 800;
-      left: 156px;
-      line-height: 0.8em;
-      padding-top: 8px;
-      top: 18px;
+   .section_banner_heading {
+      &::before {
+         content: "start";
+         background-color: map-get($colors, marker-bg);
+         position: absolute;
+         font-weight: 800;
+         left: 156px;
+         line-height: 0.8em;
+         padding-top: 8px;
+         top: 18px;
+      }
    }
 }
+
 button {
    @include button-mixin($button-bg-color:map-get($colors, button-bg));
 }
+
 footer {
    color: map-get($colors, text-1);
    background-color: map-get($colors, cards-bg);
@@ -170,6 +177,7 @@ footer {
    width: 150px;
    font-size: 8px;
 }
+
 .landing-logo {
    width: 80px;
    p {
