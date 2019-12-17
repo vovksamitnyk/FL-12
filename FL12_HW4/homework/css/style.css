@@ -1,7 +1,140 @@
-.body {
-   display: grid;
-   grid-template-areas:
-      “header header header”
-      “emptyDiv article emptyDiv”
-      “footer footer footer”;
+* {
+  margin: 0;
+  padding: 0;
 }
+
+.body {
+  color: #777;
+  max-height: 600px;
+  display: grid;
+  grid-template-rows: 100vh 1fr 1fr;
+  grid-template-columns: 1fr 900px 1fr;
+  grid-template-areas:
+    'header header header'
+    'article article article'
+    'footer footer footer';
+  grid-gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  height: 100vh;
+  background-image: url(../img/home-bg.jpg);
+/*  background-position: -100px 50px ;*/
+  background-size: 100%;
+  color: #FFFFFF;
+  display: block;
+}
+.nav {
+  color: #777;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  background-color: #fff;
+  padding-top: 2.5vh;
+  position: fixed;
+}
+.nav div {
+  width: 100%;
+  text-align: center;
+}
+.nav p {
+  font-size: medium;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.nav a {
+  display: inline-flex;
+  width: 20%;
+  text-decoration: none;
+  color: #777;
+}
+.nav a:hover {
+  color: #bfba55;
+}
+
+.header-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content-intro {
+  display: block;
+  text-align: center;
+}
+.header-content-intro div {
+  margin: 20px auto;
+}
+.header-content-intro h1 {
+  font-size: 4em;
+}
+#topButton {
+
+}
+
+
+
+.article {
+  border: 1px solid lightgreen;
+  grid-area: article;
+  width: 50%;
+  margin: 0 auto;
+}
+.button {
+  padding: 2vh 3vh;
+  border-radius: 50px;
+  font-size: .6em;
+  font-weight: 400;
+  color: #777;
+  border: 1px solid #777;
+}
+
+.section-picture {
+  width: 100%;
+}
+
+.section {
+  border: 1px solid red;
+  margin: 8vh 0;
+}
+.section h2 {
+  font-size: 1em;
+  color: #000;
+  margin: 1em 0 .5em 0;
+}
+.section p {
+  margin: 1em 0 1.5em 0;
+  font-size: .6em;
+  line-height: 1.5em;
+}
+.underH2 {
+  display: flex;
+  font-size: .6em;
+  align-items: center;
+}
+.underH2 div {
+  margin: 0 1em;
+}
+.autors-photo {
+  border-radius: 100%;
+  width: 3em;
+}
+
+
+
+.footer {
+  border: 1px solid darkgreen;
+  grid-area: footer;
+  height: 20vh;
+  padding-top: 5vh;
+  background-color: #000;
+  display: flex;
+}
+.footer div {
+  border: 1px solid red;
+  width: 50%;
+
+}
+
