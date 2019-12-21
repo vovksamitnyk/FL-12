@@ -1,0 +1,332 @@
+/*
+* Feel free to change name of colors if you need it
+* Feel free to add new colors if you need it
+*/
+
+/*
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+}
+*/
+
+body {
+  font-family: roboto;
+  padding: 0;
+  margin: 0 auto;
+  background-color: #0b192f;
+  max-width: 1280px;
+}
+.post-1 {
+  background: #9d27b0;
+}
+.post-2 {
+  background: #9bb800;
+}
+.post-3 {
+  background: #ed5120;
+}
+.post-4 {
+  background: #9d27b0;
+}
+.post-5 {
+  background: #2d95bb;
+}
+
+/* Your styles go here */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header p {
+  color: #fff;
+  margin: .6em;
+}
+h1 {
+  color: #fff;
+  font-weight: 200;
+  font-size: 220%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #024161;
+}
+.hdr-left {
+  font-size: 200%;
+  font-weight: 200;
+}
+.hdr-right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#logo {
+  color: #d12767;
+}
+.nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-a {
+  height: 100%;
+  width: 25%;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-a:hover {
+  background-color: #1f52a4;
+}
+
+.header-photo {
+  margin-top: 2%;
+  display: flex;
+  width: 100%;
+  background-image: url(../img/post0.jpg);
+  background-position: center bottom;
+  height: 400px;
+  align-items: flex-end;
+}
+.header-text {
+  max-width: 60%;
+  margin: 0 0 6% 4%;
+}
+
+main {
+  margin-top: 2%;
+  display: flex;
+}
+
+.post, .blog-b {
+  display: flex;
+}
+.blog-a, .blog-b {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #fff;
+}
+.blog-a:hover img, .blog-b:hover {
+  opacity: 0.5;
+}
+
+.blog-list {
+  color: #fff;
+}
+
+h2 {
+  font-size: 180%;
+  font-weight: 200;
+}
+p {
+  color: hsla(100, 100%, 100%, 0.5);
+  font-size: 70%;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: 2em;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.post {
+  display: flex;
+}
+.post-photo {
+  flex: 50%;
+}
+.post-text {
+  flex: 50%;
+  display: flex;
+}
+.post-text p {
+  margin-top: 2em;
+}
+.post-text-text {
+  padding: 7% 9%;
+}
+.post-text-date {
+  margin: 3%;
+  color: hsla(100, 100%, 100%, 0.3);
+  font-weight: 200;
+}
+.post-text-date h2 {
+  margin: 0;
+}
+.post-text-date p {
+  margin: 0;
+  font-size: 100%;
+  font-weight: 200;
+  color: hsla(100, 100%, 100%, 0.3);
+}
+
+aside {
+  display: block;
+  margin-left: 2%;
+  width: 60%;
+}
+.news {
+  display: block;
+  margin: 0 0 8% 0;
+}
+.news-photo {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.news-text {
+  margin: 0;
+  padding: 10%;
+  background-color: #fff;
+}
+.news-text h3 {
+  color: #0b192f;
+  margin-top: 0;
+  font-weight: 300;
+}
+.news-text p {
+  color: gray;
+
+}
+.post-no-photo .post-text-text {
+  padding: 4%;
+}
+.post-no-photo .post-text-date {
+  margin: 1.5%;
+}
+
+footer {
+  display: flex;
+  padding: 1% 3%;
+  margin: 2% 0 0 0;
+  background-color: #024161;
+  justify-content: space-between;
+}
+footer p {
+  margin: 0;
+  color: hsla(100, 100%, 100%, 0.2);
+}
+
+@media all and (min-width: 769px) {
+  /* desktop */
+  body {
+    min-width: 769px;
+    max-width: 900px;
+  }
+  main {
+    max-width: 96vw;
+    margin: 2% auto;
+  }
+  .hdr-right #icon-menu {
+    display: none;
+  }
+  .hdr-left p {
+    margin-left: 20px;
+  }
+  .post {
+    flex-direction: row;
+  }
+  .post:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .post:nth-child(even) .blog-b {
+    flex-direction: row-reverse;
+  }
+  .post:nth-child(even) .post-text .blog-b {
+    text-align: right;
+  }
+  .blog-b {
+    font-size: .8em;
+  }
+}
+
+@media all and (max-width: 768px) {
+  /* tab */
+  body {
+    width: 97%;
+    min-width: 481px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  aside {
+    width: 100%;
+  }
+  .header {
+    flex-direction: column-reverse;
+  }
+  .header .hdr-left {
+    text-align: center;
+    font-size: 50px;
+  }
+  .header .hdr-right {
+    width: 100%;
+  }
+  .header .hdr-right nav{
+    display: none;
+  }
+  .header .hdr-right #icon-menu {
+    display: flex;
+    margin: 5% 0 0 0;
+    font-size: 150%;
+  }
+  .post {
+    flex-direction: column;
+  }
+
+  footer {
+    display: block;
+    margin: 2% 0 0 0;
+    padding: 4vw;
+    text-align: center;
+  }
+  #copyright {
+    margin-bottom: 0;
+  }
+  #design-and-coding {
+    margin-top: 0;
+  }
+  .header-text {
+    max-width: 90%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  /* mobile */
+
+  p {
+    font-size: 80%;
+  }
+  body {
+    min-width: 319px;
+  }
+  main {
+    flex-direction: column;
+  }
+  .post-no-photo .post-text-text {
+    padding: 8%;
+  }
+  aside {
+    width: 100%;
+    margin: 2% 0 0 0;
+  }
+  .news {
+    margin: 2vw 0;
+  }
+  footer {
+    padding: 4vw;
+  }
+}
