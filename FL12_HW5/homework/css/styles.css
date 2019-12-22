@@ -257,10 +257,9 @@ footer p {
 @media all and (max-width: 768px) {
   /* tab */
   body {
-    width: 97%;
     min-width: 481px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2vw;
   }
   aside {
     width: 100%;
@@ -311,7 +310,7 @@ footer p {
     font-size: 80%;
   }
   body {
-    min-width: 319px;
+    min-width: 320px;
   }
   main {
     flex-direction: column;
