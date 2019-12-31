@@ -12,7 +12,6 @@ function makeNumber(string) {
 function countNumbers(string) {
    let obj = {};
    let numbers = makeNumber(string);
-   obj[numbers[0]] = 1;
    for (let i = 1; i < numbers.length; i++) {
       if (obj[numbers[i]]) {
          obj[numbers[i]]++;
